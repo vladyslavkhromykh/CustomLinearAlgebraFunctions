@@ -39,4 +39,8 @@ public static class V3
         // return Mathf.Acos (DotProduct(a, b)/ (Magnitude(a)*V3.Magnitude(b)));
         return Mathf.Rad2Deg * Mathf.Acos (DotProduct(a, b));
     }
+
+    public static Vector3 CrossProduct(Vector3 a, Vector3 b) {
+        return new Vector3(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x); 
+    }
 }
